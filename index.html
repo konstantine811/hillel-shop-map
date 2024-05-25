@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,14 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="min-h-screen flex flex-col">
+      <div class="bg-gray-100 py-5">
+        <div class="container">
+          <nav id="nav"></nav>
+        </div>
+      </div>
+      <div class="grow flex flex-col" id="app"></div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
