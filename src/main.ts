@@ -1,4 +1,5 @@
 import "./style.scss";
+import "mapbox-gl/dist/mapbox-gl.css";
 import "./services/train-map-data.ts";
 import { bootRouting } from "./services/routing/router.ts";
 import { ROUTE_PATH } from "./config/route.config.ts";

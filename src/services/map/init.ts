@@ -20,8 +20,8 @@ class HillelMap {
     return new Map({
       container: container, // container ID in the HTML where the map should appear
       style: styleMap,
-      center: [-74.5, 40], // starting position [lng, lat]
-      zoom: 9, // starting zoom level
+      center: [31.1656, 48.3794], // starting position [lng, lat]
+      zoom: 0, // starting zoom level
     });
   }
 }
