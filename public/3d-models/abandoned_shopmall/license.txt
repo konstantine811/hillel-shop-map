@@ -1,0 +1,11 @@
+Model Information:
+* title:	Abandoned Shop/mall
+* source:	https://sketchfab.com/3d-models/abandoned-shopmall-e52734c8947e466a8f2943ae3bfc0d1e
+* author:	Thunder (https://sketchfab.com/thunderpwn)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Abandoned Shop/mall" (https://sketchfab.com/3d-models/abandoned-shopmall-e52734c8947e466a8f2943ae3bfc0d1e) by Thunder (https://sketchfab.com/thunderpwn) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

@@ -8,7 +8,7 @@ mapboxgl.accessToken =
 class HillelMap {
   private _map: Map;
 
-  constructor(idContainer: string, styleMap: string = MAP_STYLES.own) {
+  constructor(idContainer: string, styleMap: string = MAP_STYLES.light) {
     this._map = this.mapSetup(idContainer, styleMap);
   }
 
@@ -20,8 +20,8 @@ class HillelMap {
     return new Map({
       container: container, // container ID in the HTML where the map should appear
       style: styleMap,
-      center: [-74.5, 40], // starting position [lng, lat]
-      zoom: 9, // starting zoom level
+      center: [31.1656, 48.3794], // початковий центр (Україна)
+      zoom: 0, // початковий рівень масштабування
     });
   }
 }

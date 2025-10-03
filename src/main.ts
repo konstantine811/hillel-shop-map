@@ -1,47 +1,58 @@
 import "./style.css";
-import HillelMap from "./services/map/init.ts";
-import { MAP_STYLES } from "./config/common-map.config.ts";
+import "mapbox-gl/dist/mapbox-gl.css";
 import "./services/train-map-data.ts";
+import {
+  registerBrowserBackAndForth,
+  registerNavLinks,
+  renderIntialPage,
+  renderNavLinks,
+} from "./services/routing/router.ts";
+import { ROUTES, ROUTES_PATH } from "./config/route.config.ts";
+import { MapPage, mapPageContent } from "./pages/map.ts";
+import { Component } from "./pages/common.ts";
+import { HomePage, homePageContent } from "./pages/home.ts";
+import { houseScenePageContent, HouseScenePage } from "./pages/houseScene.ts";
+import {
+  FoxExperiencePage,
+  foxExperiencePageContent,
+} from "./pages/foxExperience.ts";
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = /*html*/ `
-  <div id="map" style="width: 100%; height: 100vh"></div>
-`;
-const { map } = new HillelMap("map", MAP_STYLES.own);
-const WEATHER_API_KEY = "ca51dc5865dbe4eba4709c18e67c224a";
-const getWeatherApiUrl = (lat: number, lon: number) =>
-  `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`;
+const nav = document.querySelector("#nav") as HTMLElement;
+const app = document.querySelector<HTMLDivElement>("#app");
+if (app) {
+  let prevEntityClass: Component | null = null;
 
-const POINT_CONFIG = {
-  sourceId: "points",
-  layerId: "pointsLayer",
-};
+  ROUTES[ROUTES_PATH.MAP].content = mapPageContent();
+  ROUTES[ROUTES_PATH.HOME].content = homePageContent();
+  ROUTES[ROUTES_PATH.houseScene].content = houseScenePageContent();
+  ROUTES[ROUTES_PATH.foxExperience].content = foxExperiencePageContent();
 
-map.on("load", () => {
-  map.addSource(POINT_CONFIG.sourceId, {
-    type: "geojson",
-    data: {
-      type: "FeatureCollection",
-      features: [],
-    },
-  });
-
-  // Add a new layer to visualize the polygon.
-  map.addLayer({
-    id: POINT_CONFIG.layerId,
-    type: "circle",
-    source: POINT_CONFIG.sourceId, // reference the data source
-    layout: {},
-    paint: {
-      "circle-color": "#FF0000",
-    },
-  });
-});
-
-map.on("click", (e) => {
-  const { lat, lng } = e.lngLat;
-  fetch(getWeatherApiUrl(lat, lng))
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-    });
-});
+  function onRouteChange(route: ROUTES_PATH) {
+    if (prevEntityClass) {
+      prevEntityClass.onDestroy();
+      prevEntityClass = null;
+    }
+    switch (route) {
+      case ROUTES_PATH.HOME:
+        prevEntityClass = new HomePage();
+        break;
+      case ROUTES_PATH.MAP:
+        prevEntityClass = new MapPage();
+        break;
+      case ROUTES_PATH.houseScene:
+        prevEntityClass = new HouseScenePage();
+        break;
+      case ROUTES_PATH.foxExperience:
+        prevEntityClass = new FoxExperiencePage();
+        break;
+    }
+  }
+  if (nav) {
+    (function bootup() {
+      renderNavLinks(nav);
+      registerNavLinks(app, nav, onRouteChange);
+      registerBrowserBackAndForth(app, onRouteChange);
+      renderIntialPage(app, onRouteChange);
+    })();
+  }
+}
