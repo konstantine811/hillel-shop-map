@@ -1,0 +1,11 @@
+Model Information:
+* title:	Shop
+* source:	https://sketchfab.com/3d-models/shop-a1242d77341545b59c50960395753f3a
+* author:	Vadim Rychkov (https://sketchfab.com/vadim_rychkov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Shop" (https://sketchfab.com/3d-models/shop-a1242d77341545b59c50960395753f3a) by Vadim Rychkov (https://sketchfab.com/vadim_rychkov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

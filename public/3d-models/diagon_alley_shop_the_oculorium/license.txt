@@ -1,0 +1,11 @@
+Model Information:
+* title:	Diagon Alley Shop: The Oculorium
+* source:	https://sketchfab.com/3d-models/diagon-alley-shop-the-oculorium-b78d542fcfd344008fb5c6bbbcb14feb
+* author:	Alfie Bramley (https://sketchfab.com/alfredbramley)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Diagon Alley Shop: The Oculorium" (https://sketchfab.com/3d-models/diagon-alley-shop-the-oculorium-b78d542fcfd344008fb5c6bbbcb14feb) by Alfie Bramley (https://sketchfab.com/alfredbramley) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

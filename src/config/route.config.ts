@@ -1,24 +1,27 @@
-import { HomePageContent } from "../components/pages/Home";
-import { MapPageContent } from "../components/pages/Map";
-import { ThreePageContent } from "../components/pages/Three";
+import { IRoute } from "../models/route.model";
 
-export const enum ROUTE_PATH {
+export enum ROUTES_PATH {
   HOME = "/",
   MAP = "/map",
-  THREE = "/three",
+  houseScene = "/house-scene",
+  foxExperience = "/fox-experience",
 }
 
-export const ROUTES = {
-  [ROUTE_PATH.HOME]: {
+export const ROUTES: IRoute = {
+  [ROUTES_PATH.HOME]: {
     linkLabel: "Home",
-    content: HomePageContent(),
+    content: `I am in home page`,
   },
-  [ROUTE_PATH.MAP]: {
+  [ROUTES_PATH.MAP]: {
     linkLabel: "Map",
-    content: MapPageContent(),
+    content: `I am in map page`,
   },
-  [ROUTE_PATH.THREE]: {
-    linkLabel: "3d Web",
-    content: ThreePageContent(),
+  [ROUTES_PATH.houseScene]: {
+    linkLabel: "House Scene",
+    content: `I am in house scene page`,
+  },
+  [ROUTES_PATH.foxExperience]: {
+    linkLabel: "Fox Experience",
+    content: `I am in fox experience page`,
   },
 };

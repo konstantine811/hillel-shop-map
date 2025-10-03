@@ -2,14 +2,20 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    container: {
-      center: true,
-    },
     extend: {
+      container: {
+        center: true,
+      },
       colors: {
         gray: {
-          100: "#f7f7f7",
+          100: "#ececec",
         },
+        black: {
+          100: "#020202",
+        },
+      },
+      dropShadow: {
+        text: "1px 1px 2px rgba(255,255,255,0.5)",
       },
     },
   },

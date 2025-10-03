@@ -29,26 +29,6 @@ declare module "threebox-plugin" {
     box3: () => Box3;
   }
 
-  interface Scale {
-    x: number;
-    y: number;
-    z: number;
-  }
-
-  interface Rotation {
-    x: number;
-    y: number;
-    z: number;
-  }
-
-  interface Options {
-    obj: string;
-    type: string;
-    scale: Scale;
-    units: string;
-    rotation: Rotation;
-  }
-
   export class Threebox {
     camera: THREE.Camera;
     constructor(
@@ -57,7 +37,7 @@ declare module "threebox-plugin" {
       options: ThreeboxOptions
     );
 
-    loadGLTF(options: Options): Promise<Group>;
+    loadGLTF(options: LoadGLTFOptions): Promise<Group>;
     add(object: LoadGLTFOptions | Group): this;
     update(): void;
     remove(object: LoadGLTFOptions | Group): this;

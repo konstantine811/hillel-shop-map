@@ -7,14 +7,15 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div class="min-h-screen flex flex-col">
-      <div class="bg-gray-100 py-5">
-        <div class="container">
-          <nav id="nav"></nav>
-        </div>
+    <div
+      id="navWrap"
+      class="bg-white/5 backdrop-blur-sm py-5 absolute top-0 z-50 w-full"
+    >
+      <div class="container">
+        <nav id="nav"></nav>
       </div>
-      <div class="grow flex flex-col" id="app"></div>
     </div>
+    <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
