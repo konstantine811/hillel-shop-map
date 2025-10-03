@@ -78,7 +78,7 @@ export class MapAdd3d implements Component {
         model.id
       ) as HTMLButtonElement;
       if (addButtonEl) {
-        addButtonEl.addEventListener("click", (e) => {
+        addButtonEl.addEventListener("click", () => {
           if (!this.currentAddModel || this.currentAddModel.id !== model.id) {
             if (this.prevButtonActive) {
               this.prevButtonActive.children[1].classList.remove("flex");

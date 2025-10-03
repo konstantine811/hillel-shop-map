@@ -1,4 +1,4 @@
-import { GUI } from "lil-gui";
+// import { GUI } from "lil-gui";
 import {
   Scene,
   Group,
@@ -8,24 +8,24 @@ import {
   ConeGeometry,
 } from "three";
 import Experience from "@services/three-instance/Experience";
-import Resources from "@services/three-instance/utils/Resources";
-import Time from "@services/three-instance/utils/Time";
-import Debug from "@services/three-instance/utils/Debug";
+// import Resources from "@services/three-instance/utils/Resources";
+// import Time from "@services/three-instance/utils/Time";
+// import Debug from "@services/three-instance/utils/Debug";
 
 export default class House {
   private _experience: Experience;
   private _scene: Scene;
-  private _resources: Resources;
-  private _time: Time;
-  private _debug: Debug;
-  private _debugFolder!: GUI;
+  // private _resources: Resources;
+  // private _time: Time;
+  // private _debug: Debug;
+  // private _debugFolder!: GUI;
   private _house!: Group;
   constructor() {
     this._experience = new Experience();
     this._scene = this._experience.scene;
-    this._resources = this._experience.resources;
-    this._time = this._experience.time;
-    this._debug = this._experience.debug;
+    // this._resources = this._experience.resources;
+    // this._time = this._experience.time;
+    // this._debug = this._experience.debug;
     this.addHouse();
   }
 

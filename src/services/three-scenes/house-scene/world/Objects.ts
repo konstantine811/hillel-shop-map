@@ -1,20 +1,20 @@
-import { RigidBody, World } from "@dimforge/rapier3d";
+import { RigidBody } from "@dimforge/rapier3d";
 import { BodyTypeProps, ColliderTypeProps } from "@models/rapier-physic.model";
 import Experience from "@services/three-instance/Experience";
 import Physic from "@services/three-instance/Physic";
-import { Mesh, Quaternion, Scene } from "three";
+import { Mesh, Quaternion } from "three";
 
 export default class Objects {
   private _experience: Experience;
-  private _scene: Scene;
+  // private _scene: Scene;
   private _physicWorld: Physic;
-  private _world: World;
+  // private _world: World;
   private _bodys: { rigid: RigidBody; mesh: Mesh }[] = [];
   constructor() {
     this._experience = new Experience();
-    this._scene = this._experience.scene;
+    // this._scene = this._experience.scene;
     this._physicWorld = this._experience.physicWorld;
-    this._world = this._experience.physicWorld.world;
+    // this._world = this._experience.physicWorld.world;
     this.addObjects();
   }
 
