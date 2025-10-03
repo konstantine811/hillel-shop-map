@@ -57,7 +57,7 @@ export const registerBrowserBackAndForth = (
   app: HTMLElement,
   callback: Function
 ) => {
-  window.onpopstate = function (e) {
+  window.onpopstate = function () {
     const route = location.pathname.split("#")[0];
     renderContent(app, route as ROUTES_PATH, callback);
   };
